@@ -19,6 +19,8 @@ class BlurWorker(ctx: Context, params: WorkerParameters): Worker(ctx, params)  {
 
         makeStatusNotification("Blurring images", appContext)
 
+        sleep()
+
         val resourceUri = inputData.getString(KEY_IMAGE_URI)
         //create a bitmap
         return try {
